@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;  /*padding also included in specified size */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: orange;
+    display: flex;
+    font-family: 'Poppins', 'Ariel', sans-serif;
+    justify-content: center;
+}
+
+.container{
+    background:linear-gradient(#2193b0,#6dd5ed);
+    margin: 50px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 4px black;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.status-action{
+    display: flex;
+    justify-content: space-around;  /*space-between*/
+    font-size: 25px;
+    margin-top: 25px;
+    height: 30px;
+}
+
+.status span {
+    color: black;
+}
+
+.reset {
+    cursor: pointer;
+}
+
+.reset:hover {
+    color: black;
+}
+
+/* .game-grid{      //mene kiya
+margin-top: 30px;
+display:flex;
+height: 300px;      // 41vh 
+width: 350px;       // 25vw
+flex-wrap: wrap;
+justify-content: space-around;
+}  */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 6px;
+    margin-top: 50px;
+}
+
+.game-cell {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 120px;    /* 13vh */
+    width: 150px;    /* 8vw */
+    opacity: 0.8;
+}
+
+.X,
+.O {
+    cursor: default;
+}
+
+.X::after {
+    content: 'X';
+    font-size: 100px;
+}
+
+.O::after {
+    content: 'O';
+    font-size: 100px;
+    color: greenyellow;
+}
+
+.won::after {
+    color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+    .game-grid {
+        margin-top: 25px;
+        grid-gap:10px;
+    }
+}
+
+.game-cell{
+    height: 120px;
+    width:150px;
+}
+
+.X::after{
+    font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
